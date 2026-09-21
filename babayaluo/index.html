@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>巴巴亚罗 - 漫威宇宙中的魔神与宇宙主宰</title>
+    <meta name="description" content="巴巴亚罗（Baba Yaga）是漫威漫画中的经典反派角色，也是宇宙级力量实体。本站提供巴巴亚罗的详细背景介绍、能力解析、漫画作品收录及角色深度分析。">
+    <meta name="keywords" content="巴巴亚罗, 漫威, Baba Yaga, 魔神, 漫画, 反派, 宇宙级">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --accent-color: #d32f2f;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --bg-light: #f4f4f4;
+            --bg-white: #ffffff;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-light);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://picsum.photos/seed/babayaga_dark/1920/1080.jpg') center/cover no-repeat;
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: #b71c1c;
+            transform: translateY(-2px);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .section-title p {
+            color: var(--text-secondary);
+        }
+
+        /* Character Profile */
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .profile-image img {
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .profile-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .profile-content p {
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+            background: var(--bg-white);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .stat-item strong {
+            display: block;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+
+        .stat-item span {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Powers Grid */
+        .powers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .power-card {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid var(--accent-color);
+        }
+
+        .power-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .power-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .power-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .power-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Works & Appearances */
+        .works-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .work-item {
+            display: flex;
+            background: var(--bg-white);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .work-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #e0e0e0;
+            line-height: 1;
+        }
+
+        .work-info h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .work-info span {
+            color: var(--accent-color);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--bg-white);
+            margin-bottom: 1rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .faq-question:hover {
+            background-color: #fafafa;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            color: var(--text-secondary);
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            max-height: 500px;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col a {
+            color: #ccc;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner nav {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+
+            .header-inner nav.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .profile-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-image {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">Marvel<span>Wiki</span></a>
+            <button class="mobile-menu-btn" aria-label="菜单">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#profile">角色档案</a></li>
+                    <li><a href="#powers">能力解析</a></li>
+                    <li><a href="#works">漫画收录</a></li>
+                    <li><a href="#faq">常见问答</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>巴巴亚罗 Baba Yaga</h1>
+                <p>漫威宇宙中的魔神实体，古老力量的化身，也是复仇者联盟最古老且危险的敌人之一。</p>
+                <a href="#profile" class="cta-button">深入了解角色</a>
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile">
+            <div class="container">
+                <div class="section-title">
+                    <h2>角色档案</h2>
+                    <p>关于巴巴亚罗的起源、身份与背景故事</p>
+                </div>
+                <div class="profile-grid">
+                    <div class="profile-image">
+                        <img src="https://picsum.photos/seed/babayaga_art/600/400.jpg" alt="巴巴亚罗概念图">
+                    </div>
+                    <div class="profile-content">
+                        <h3>古老魔神</h3>
+                        <p>巴巴亚罗在漫威宇宙中并非普通人类，而是一位源自高维空间的古老实体。她的原型取材于斯拉夫民间传说中的“巴布亚·亚加”（Baba Yaga），即一位居住在森林深处的神秘老妇人，通常被描绘为手持铁锅飞翔的巫师，既可怕又拥有强大的魔法力量。</p>
+                        <p>在漫威漫画中，她被重塑为一位拥有近乎神级力量的魔神。她拥有操控现实、操纵时间与空间以及强大的精神控制能力。她经常作为幕后黑手出现，操纵宇宙中的混乱事件，甚至试图通过毁灭或重塑世界来达成某种目的。</p>
+                        
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <strong>全名</strong>
+                                <span>未知 / Baba Yaga</span>
+                            </div>
+                            <div class="stat-item">
+                                <strong>类型</strong>
+                                <span>魔神</span>
+                            </div>
+                            <div class="stat-item">
+                                <strong>能力等级</strong>
+                                <span>宇宙级</span>
+                            </div>
+                            <div class="stat-item">
+                                <strong>所属阵营</strong>
+                                <span>混沌/反派</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Powers Section -->
+        <section id="powers" style="background-color: white;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>能力解析</h2>
+                    <p>剖析巴巴亚罗作为顶级反派的核心能力</p>
+                </div>
+                <div class="powers-grid">
+                    <article class="power-card">
+                        <span class="power-icon">🔮</span>
+                        <h3>现实扭曲</h3>
+                        <p>巴巴亚罗能够随意改变物质状态、创造或毁灭物体，甚至修改物理法则，使其在特定范围内生效。</p>
+                    </article>
+                    <article class="power-card">
+                        <span class="power-icon">⏳</span>
+                        <h3>时间操纵</h3>
+                        <p>她能够冻结时间、倒流时间或加速时间流逝，这使得她在战斗中拥有极大的主动权。</p>
+                    </article>
+                    <article class="power-card">
+                        <span class="power-icon">🧠</span>
+                        <h3>精神控制</h3>
+                        <p>通过心灵感应或精神投射，她可以控制弱小生物的大脑，或者让英雄们陷入幻觉。</p>
+                    </article>
+                    <article class="power-card">
+                        <span class="power-icon">🛡️</span>
+                        <h3>魔法护盾</h3>
+                        <p>她周身环绕着强大的魔法能量场，几乎能抵挡所有形式的物理攻击和能量冲击。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Works Section -->
+        <section id="works">
+            <div class="container">
+                <div class="section-title">
+                    <h2>主要作品收录</h2>
+                    <p>巴巴亚罗登场的重要漫画与故事线</p>
+                </div>
+                <div class="works-list">
+                    <div class="work-item">
+                        <div class="work-number">01</div>
+                        <div class="work-info">
+                            <h4>《超级英雄军团》</h4>
+                            <span>漫威漫画系列</span>
+                        </div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-number">02</div>
+                        <div class="work-info">
+                            <h4>《毁灭日：巴巴亚罗篇》</h4>
+                            <span>宇宙恐怖故事线</span>
+                        </div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-number">03</div>
+                        <div class="work-info">
+                            <h4>《魔法X》</h4>
+                            <span>神秘生物与魔神集结</span>
+                        </div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-number">04</div>
+                        <div class="work-info">
+                            <h4>《新复仇者》</h4>
+                            <span>对抗古老魔神的战斗</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" style="background-color: white;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>常见问答</h2>
+                    <p>关于巴巴亚罗的疑问解答</p>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">巴巴亚罗在漫威宇宙中的定位是什么？</div>
+                        <div class="faq-answer">
+                            <p>巴巴亚罗属于“魔神”阶层，这是漫威宇宙中一个古老且强大的群体，其力量远超普通超级英雄。她通常被视为幕后操纵者或高等级的威胁。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">她与复仇者联盟有过哪些冲突？</div>
+                        <div class="faq-answer">
+                            <p>虽然她不是复仇者联盟的头号死敌（如灭霸），但她曾多次介入地球事务，试图利用地球的资源或人类进行某种仪式，从而与复仇者产生冲突。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">她的铁屋有什么特殊含义？</div>
+                        <div class="faq-answer">
+                            <p>在斯拉夫传说中，巴布亚·亚加的屋子的鸡脚是一个标志。在漫威改编中，这通常象征着她的神秘住所和与异次元的连接，是她进行魔法仪式的地点。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于本站</h4>
+                    <p style="color: #ccc; font-size: 0.9rem;">本站致力于整理漫威漫画中的经典反派角色资料，为粉丝提供详尽的角色背景与能力分析。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#profile">角色档案</a></li>
+                        <li><a href="#powers">能力图鉴</a></li>
+                        <li><a href="#works">漫画收录</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关资源</h4>
+                    <ul>
+                        <li><a href="#">漫威宇宙百科</a></li>
+                        <li><a href="#">漫画购买指南</a></li>
+                        <li><a href="#">粉丝社区</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 漫威角色资料库. All rights reserved. 本站为非商业性粉丝整理站点.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('nav');
+
+        mobileBtn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                // Close other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    nav.classList.remove('active');
+                    
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
