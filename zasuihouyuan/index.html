@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="杂碎后院音乐论坛 - 一个专注于独立音乐、地下电子、实验噪音与黑胶唱片的中文音乐爱好者社区。分享乐评、黑胶收藏、现场演出信息及独立音乐资源。">
+    <meta name="keywords" content="杂碎后院音乐论坛,独立音乐,黑胶唱片,电子音乐,地下音乐,乐评,音乐社区">
+    <title>杂碎后院音乐论坛-独立音乐与黑胶爱好者的精神角落</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --bg-color: #0f0f0f;
+            --card-bg: #1a1a1a;
+            --text-main: #e0e0e0;
+            --text-muted: #888888;
+            --accent-color: #d4a017; /* 哑光金，符合复古/黑胶调性 */
+            --accent-hover: #f0c040;
+            --border-color: #333333;
+            --font-serif: "Georgia", "Times New Roman", serif;
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: var(--text-main);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            border-bottom: 1px solid var(--border-color);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            background-color: rgba(15, 15, 15, 0.95);
+            backdrop-filter: blur(5px);
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        nav a.active, nav a:hover {
+            color: var(--text-main);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-outline {
+            border: 1px solid var(--border-color);
+            background: transparent;
+            color: var(--text-main);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: #000;
+            border: none;
+            font-weight: bold;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 4rem 0;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+            background: linear-gradient(to bottom, #141414, #0f0f0f);
+        }
+
+        .hero h1 {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            font-size: 1.1rem;
+        }
+
+        .tags {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: #222;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            border: 1px solid #333;
+        }
+
+        /* Forum Sections */
+        .forum-section {
+            padding: 3rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 1rem;
+        }
+
+        .section-header h2 {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Forum Grid */
+        .forum-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .forum-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 1.5rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .forum-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            border-color: #444;
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: #666;
+            border-top: 1px solid #2a2a2a;
+            padding-top: 1rem;
+        }
+
+        .meta-item span {
+            display: block;
+        }
+
+        .meta-item strong {
+            color: var(--text-muted);
+        }
+
+        /* Latest Discussions */
+        .discussion-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .discussion-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 4px;
+            border: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .discussion-item:hover {
+            border-color: var(--border-color);
+        }
+
+        .disc-info {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .disc-avatar {
+            width: 40px;
+            height: 40px;
+            background-color: #333;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        .disc-content h3 {
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .disc-meta {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .disc-stats {
+            text-align: right;
+            min-width: 80px;
+        }
+
+        .stat-num {
+            display: block;
+            font-weight: bold;
+            color: var(--text-main);
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        /* Vinyl Showcase */
+        .vinyl-showcase {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .vinyl-art {
+            width: 100%;
+            aspect-ratio: 1/1;
+            background-color: #000;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+            border: 8px solid #1a1a1a;
+        }
+        
+        .vinyl-art img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .vinyl-art:hover img {
+            transform: scale(1.05);
+        }
+
+        .vinyl-info h3 {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .vinyl-info p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .vinyl-specs {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .spec-item {
+            background: #222;
+            padding: 0.8rem;
+            border-radius: 4px;
+        }
+
+        .spec-label {
+            font-size: 0.75rem;
+            color: #666;
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+
+        .spec-value {
+            font-size: 0.9rem;
+        }
+
+        /* Newsletter */
+        .newsletter {
+            background-color: var(--card-bg);
+            padding: 3rem;
+            border-radius: 8px;
+            text-align: center;
+            margin: 3rem 0;
+            border: 1px solid var(--border-color);
+        }
+
+        .newsletter h2 {
+            font-family: var(--font-serif);
+            margin-bottom: 1rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+            gap: 0.5rem;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 0.8rem;
+            background: #000;
+            border: 1px solid #333;
+            color: #fff;
+            border-radius: 4px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #050505;
+            padding: 3rem 0;
+            margin-top: 3rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            color: #555;
+            font-size: 0.85rem;
+            padding-top: 2rem;
+            border-top: 1px solid #1a1a1a;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            nav ul {
+                gap: 1rem;
+                font-size: 0.85rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .vinyl-showcase {
+                grid-template-columns: 1fr;
+            }
+
+            .discussion-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+
+            .disc-stats {
+                text-align: left;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                border-top: 1px solid #333;
+                padding-top: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <span>♫</span> 杂碎后院音乐论坛
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">版块导航</a></li>
+                    <li><a href="#">资源下载</a></li>
+                    <li><a href="#">黑胶交换</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="btn btn-outline">登录</button>
+                <button class="btn btn-primary">注册</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>逃离主流，寻找声音的杂碎</h1>
+                <p>这里不是商业化的音乐广场，而是属于独立音乐人、黑胶收藏家和声音探索者的精神后院。分享冷门唱片、探讨实验声音、讨论现场演出。</p>
+                <div class="tags">
+                    <span class="tag">#独立摇滚</span>
+                    <span class="tag">#电子噪音</span>
+                    <span class="tag">#黑胶唱片</span>
+                    <span class="tag">#现场Live</span>
+                    <span class="tag">#冷门乐评</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <div class="container">
+            
+            <!-- Featured Vinyl -->
+            <section class="forum-section">
+                <div class="section-header">
+                    <div>
+                        <h2>本周黑胶推荐</h2>
+                        <p>由资深黑胶玩家精心挑选的压轴唱片</p>
+                    </div>
+                    <a href="#" style="color: var(--accent-color); font-size: 0.9rem;">查看更多 &rarr;</a>
+                </div>
+                <div class="vinyl-showcase">
+                    <div class="vinyl-art">
+                        <img src="https://picsum.photos/seed/vinyl1/600/600" alt="Vinyl Record Cover">
+                    </div>
+                    <div class="vinyl-info">
+                        <h3>《琥珀色的回声》</h3>
+                        <p>这张来自北欧的实验电子专辑，采用了大量模拟合成器与真实乐器混音。专辑封面设计灵感源自1970年代的迷幻海报，充满了复古的颗粒感。推荐曲目：《The Silent Room》。</p>
+                        <div class="vinyl-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">发行年份</span>
+                                <span class="spec-value">2023</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">格式</span>
+                                <span class="spec-value">180g 黑胶</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">风格</span>
+                                <span class="spec-value">Dark Ambient / EBM</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">厂牌</span>
+                                <span class="spec-value">Sublime Frequency</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary">试听片段</button>
+                        <button class="btn btn-outline" style="margin-left: 10px;">加入心愿单</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Forum Categories -->
+            <section class="forum-section">
+                <div class="section-header">
+                    <h2>版块导航</h2>
+                    <p>按兴趣分类，深入讨论</p>
+                </div>
+                <div class="forum-grid">
+                    <!-- Category 1 -->
+                    <article class="forum-card">
+                        <div>
+                            <div class="card-icon">🎧</div>
+                            <h3 class="card-title">独立与摇滚</h3>
+                            <p class="card-desc">讨论独立厂牌、地下摇滚、后摇以及华语独立音乐现状。分享乐评与现场视频。</p>
+                        </div>
+                        <div class="card-meta">
+                            <span class="meta-item"><strong>128</strong> 主题</span>
+                            <span class="meta-item"><strong>3.5k</strong> 回复</span>
+                        </div>
+                    </article>
+
+                    <!-- Category 2 -->
+                    <article class="forum-card">
+                        <div>
+                            <div class="card-icon">🎛️</div>
+                            <h3 class="card-title">电子与噪音</h3>
+                            <p class="card-desc">涵盖Techno, House, IDM, Glitch以及更极端的实验噪音与器乐噪音。</p>
+                        </div>
+                        <div class="card-meta">
+                            <span class="meta-item"><strong>256</strong> 主题</span>
+                            <span class="meta-item"><strong>8.2k</strong> 回复</span>
+                        </div>
+                    </article>
+
+                    <!-- Category 3 -->
+                    <article class="forum-card">
+                        <div>
+                            <div class="card-icon">📀</div>
+                            <h3 class="card-title">黑胶收藏与交换</h3>
+                            <p class="card-desc">晒图、交换、求购二手黑胶。讨论唱机保养、压片工艺与听音室搭建。</p>
+                        </div>
+                        <div class="card-meta">
+                            <span class="meta-item"><strong>512</strong> 主题</span>
+                            <span class="meta-item"><strong>12k</strong> 回复</span>
+                        </div>
+                    </article>
+
+                    <!-- Category 4 -->
+                    <article class="forum-card">
+                        <div>
+                            <div class="card-icon">🎹</div>
+                            <h3 class="card-title">音乐制作与分享</h3>
+                            <p class="card-desc">原创作品发布、编曲技术探讨、DAW软件交流、混音母带建议。</p>
+                        </div>
+                        <div class="card-meta">
+                            <span class="meta-item"><strong>89</strong> 主题</span>
+                            <span class="meta-item"><strong>2.1k</strong> 回复</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Latest Discussions -->
+            <section class="forum-section">
+                <div class="section-header">
+                    <h2>最新动态</h2>
+                    <a href="#">进入讨论区 &rarr;</a>
+                </div>
+                <div class="discussion-list">
+                    <article class="discussion-item">
+                        <div class="disc-info">
+                            <div class="disc-avatar">A</div>
+                            <div class="disc-content">
+                                <h3>[求助] 这张德国Techno的专辑哪里能买到正版？</h3>
+                                <div class="disc-meta">发布于 <strong>独立与摇滚</strong> • 2小时前</div>
+                            </div>
+                        </div>
+                        <div class="disc-stats">
+                            <span class="stat-num">14</span>
+                            <span class="stat-label">回复</span>
+                        </div>
+                    </article>
+
+                    <article class="discussion-item">
+                        <div class="disc-info">
+                            <div class="disc-avatar">B</div>
+                            <div class="disc-content">
+                                <h3>[分享] 2024年最值得期待的5张实验音乐现场专辑</h3>
+                                <div class="disc-meta">发布于 <strong>电子与噪音</strong> • 5小时前</div>
+                            </div>
+                        </div>
+                        <div class="disc-stats">
+                            <span class="stat-num">89</span>
+                            <span class="stat-label">回复</span>
+                        </div>
+                    </article>
+
+                    <article class="discussion-item">
+                        <div class="disc-info">
+                            <div class="disc-avatar">C</div>
+                            <div class="disc-content">
+                                <h3>[晒图] 刚入的二手Decca压片，品相一般但声音很暖</h3>
+                                <div class="disc-meta">发布于 <strong>黑胶收藏与交换</strong> • 昨天</div>
+                            </div>
+                        </div>
+                        <div class="disc-stats">
+                            <span class="stat-num">42</span>
+                            <span class="stat-label">回复</span>
+                        </div>
+                    </article>
+
+                    <article class="discussion-item">
+                        <div class="disc-info">
+                            <div class="disc-avatar">D</div>
+                            <div class="disc-content">
+                                <h3>[原创] 关于独立音乐人版权保护的一些拙见</h3>
+                                <div class="disc-meta">发布于 <strong>音乐制作与分享</strong> • 昨天</div>
+                            </div>
+                        </div>
+                        <div class="disc-stats">
+                            <span class="stat-num">156</span>
+                            <span class="stat-label">回复</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Community Notice -->
+            <section class="newsletter">
+                <h2>加入杂碎后院</h2>
+                <p style="color: var(--text-muted); margin-bottom: 2rem;">注册会员可参与每周的黑胶盲盒抽奖，并解锁私密资源下载区。</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault();">
+                    <input type="email" placeholder="输入您的邮箱地址" required>
+                    <button type="submit" class="btn btn-primary">立即加入</button>
+                </form>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于杂碎后院</h4>
+                    <p style="color: #666; font-size: 0.9rem; line-height: 1.8;">
+                        杂碎后院成立于2010年，致力于为中文独立音乐爱好者提供一个纯净、非商业化的交流平台。我们相信，小众的声音同样值得被听见。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">版规说明</a></li>
+                        <li><a href="#">会员积分制度</a></li>
+                        <li><a href="#">联系版主</a></li>
+                        <li><a href="#">广告合作</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>热门标签</h4>
+                    <ul>
+                        <li><a href="#">Indie Pop</a></li>
+                        <li><a href="#">Post-Punk</a></li>
+                        <li><a href="#">Vinyl Collectors</a></li>
+                        <li><a href="#">DIY Music</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li><a href="#">官方邮箱: contact@zasui.net</a></li>
+                        <li><a href="#">Telegram群组</a></li>
+                        <li><a href="#">Discord服务器</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 杂碎后院音乐论坛. All Rights Reserved. 保留所有权利.
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>
