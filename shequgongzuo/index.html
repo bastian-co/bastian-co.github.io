@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="社区工作计划网提供专业的社区工作年度规划、季度计划及月度执行方案模板，涵盖党建、治理、服务、文化活动等核心板块，助您高效制定社区管理方案。">
+    <meta name="keywords" content="社区工作计划,社区工作年度计划,社区居委会工作计划,社区年度总结,社区治理方案">
+    <title>社区工作计划-专业社区年度规划与执行方案模板库</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #00a8cc;
+            --accent-color: #ff9f43;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-gray);
+            transition: var(--transition);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .btn-consult {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .btn-consult:hover {
+            background-color: #004494;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 40px;
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+
+        .stat-item p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* Section Titles */
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .section-header p {
+            color: var(--text-gray);
+        }
+
+        /* Plan Templates Grid */
+        .plan-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .plan-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: var(--transition);
+            border-top: 4px solid transparent;
+        }
+
+        .plan-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .plan-card.category-basic { border-top-color: #4facfe; }
+        .plan-card.category-governance { border-top-color: #00f2fe; }
+        .plan-card.category-culture { border-top-color: #ff9f43; }
+
+        .card-img {
+            height: 160px;
+            background-color: #eee;
+            position: relative;
+        }
+        
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 25px;
+        }
+
+        .card-tag {
+            display: inline-block;
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 12px;
+            background-color: #f0f0f0;
+            color: var(--text-gray);
+            margin-bottom: 10px;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            margin-bottom: 20px;
+            min-height: 48px;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        .btn-link {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .btn-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Planning Guide Section */
+        .guide-section {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            padding: 50px;
+            box-shadow: var(--shadow);
+        }
+
+        .guide-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .step-item {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .step-content p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        /* FAQ Section */
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .faq-item {
+            background: var(--white);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border: 1px solid #eee;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .faq-answer {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 60px 20px 20px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85rem;
+            color: #7f8c8d;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero-stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav {
+                display: none; /* Simplified for mobile */
+            }
+
+            .guide-section {
+                padding: 30px 20px;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                <span>社区工作计划</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#templates">计划模板</a></li>
+                    <li><a href="#guide">制定指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="btn-consult">免费咨询</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>社区工作年度规划与执行方案</h1>
+        <p>为您提供涵盖党建、综合治理、民生服务、文化活动等全维度的社区工作计划模板与撰写指南，助力社区治理现代化。</p>
+        
+        <div class="hero-stats">
+            <div class="stat-item">
+                <h3>200+</h3>
+                <p>实用模板</p>
+            </div>
+            <div class="stat-item">
+                <h3>50k+</h3>
+                <p>下载量</p>
+            </div>
+            <div class="stat-item">
+                <h3>5年</h3>
+                <p>行业服务经验</p>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <!-- Plan Templates Section -->
+        <section id="templates">
+            <div class="section-header">
+                <h2>热门社区工作计划模板</h2>
+                <p>根据不同工作重心，选择最适合您社区的年度或季度计划框架</p>
+            </div>
+
+            <div class="plan-grid">
+                <!-- Card 1 -->
+                <article class="plan-card category-basic">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/seed/community1/400/250" alt="社区年度工作计划封面">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">通用模板</span>
+                        <h3 class="card-title">社区居委会年度工作计划</h3>
+                        <p class="card-desc">适用于大多数社区，包含组织建设、社区服务、综合治理、环境卫生等常规板块的完整框架。</p>
+                        <div class="card-footer">
+                            <span style="font-size: 12px; color: #999;">2024年更新</span>
+                            <a href="#" class="btn-link">查看详情 &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="plan-card category-governance">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/seed/community2/400/250" alt="社区治理工作计划封面">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">治理创新</span>
+                        <h3 class="card-title">党建引领基层治理工作计划</h3>
+                        <p class="card-desc">重点突出“党建+网格化”管理模式，包含党员亮身份、议事协商机制、矛盾调解方案等。</p>
+                        <div class="card-footer">
+                            <span style="font-size: 12px; color: #999;">2024年更新</span>
+                            <a href="#" class="btn-link">查看详情 &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="plan-card category-culture">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/seed/community3/400/250" alt="社区文化活动计划封面">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">文化建设</span>
+                        <h3 class="card-title">社区精神文明创建活动方案</h3>
+                        <p class="card-desc">针对文明城市创建、邻里文化节、科普宣传周等专项活动的详细排期与执行细则。</p>
+                        <div class="card-footer">
+                            <span style="font-size: 12px; color: #999;">2024年更新</span>
+                            <a href="#" class="btn-link">查看详情 &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="plan-card category-basic">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/seed/community4/400/250" alt="社区民生服务计划封面">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">民生服务</span>
+                        <h3 class="card-title">便民服务与养老服务计划</h3>
+                        <p class="card-desc">包含老年人日间照料、健康义诊、困难群体帮扶、就业指导等民生实事项目清单。</p>
+                        <div class="card-footer">
+                            <span style="font-size: 12px; color: #999;">2024年更新</span>
+                            <a href="#" class="btn-link">查看详情 &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 5 -->
+                <article class="plan-card category-governance">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/seed/community5/400/250" alt="社区安全工作计划封面">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">安全综治</span>
+                        <h3 class="card-title">安全生产与消防安全月计划</h3>
+                        <p class="card-desc">针对楼道堆物清理、消防设施检查、电动车充电安全整治的具体实施方案。</p>
+                        <div class="card-footer">
+                            <span style="font-size: 12px; color: #999;">2024年更新</span>
+                            <a href="#" class="btn-link">查看详情 &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 6 -->
+                <article class="plan-card category-culture">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/seed/community6/400/250" alt="社区环境整治计划封面">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">环境整治</span>
+                        <h3 class="card-title">美丽家园环境提升行动计划</h3>
+                        <p class="card-desc">涵盖垃圾分类推广、绿化补种、牛皮癣清理及社区微景观改造的详细步骤。</p>
+                        <div class="card-footer">
+                            <span style="font-size: 12px; color: #999;">2024年更新</span>
+                            <a href="#" class="btn-link">查看详情 &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Planning Guide Section -->
+        <section id="guide">
+            <div class="section-header">
+                <h2>如何制定科学的社区工作计划</h2>
+                <p>遵循标准化流程，确保计划具有可执行性和落地性</p>
+            </div>
+
+            <div class="guide-section">
+                <div class="guide-steps">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>摸底调研与需求分析</h3>
+                            <p>通过入户走访、问卷调查和座谈会，准确掌握辖区内的人口结构、特殊群体需求及当前存在的痛点难点问题，为计划制定提供数据支撑。</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>明确目标与考核指标</h3>
+                            <p>设定SMART原则（具体、可衡量、可达成、相关性、时限性）的目标。例如，将“提升服务满意度”细化为“全年居民满意度调查达到95%以上”。</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>制定具体措施与分工</h3>
+                            <p>将大目标拆解为月度、季度任务清单。明确责任主体（网格员、物业、共建单位）和具体执行措施，确保“事事有人管，件件有着落”。</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>建立监督与反馈机制</h3>
+                            <p>建立定期检查、督导通报和群众评议制度。根据执行进度及时调整计划，确保社区工作计划不是“纸上谈兵”，而是真正推动社区发展的行动指南。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq">
+            <div class="section-header">
+                <h2>常见问题解答</h2>
+                <p>关于社区工作计划制定与执行的相关疑问</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">社区工作计划一般包含哪些核心板块？</div>
+                    <div class="faq-answer">通常包含党建工作、综合治理（治安、消防）、社区服务（养老、救助）、环境卫生、文化宣传以及行政事务管理等核心板块。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">如何提高社区工作计划的落地率？</div>
+                    <div class="faq-answer">关键在于目标量化、责任到人以及建立常态化的监督反馈机制。建议将年度计划分解为月度工作表，定期公示进展。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">老旧小区改造需要单独制定计划吗？</div>
+                    <div class="faq-answer">是的，老旧小区改造涉及工程、资金和居民协调，通常需要制定专项工作实施方案，并纳入社区年度重点工作计划中进行统筹管理。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">社区工作计划的撰写格式有标准吗？</div>
+                    <div class="faq-answer">虽然行业无绝对统一格式，但通常包括指导思想、工作目标、主要任务、实施步骤和保障措施五个部分。</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于我们</h4>
+                <p style="font-size: 0.9rem; color: #bdc3c7; line-height: 1.8;">
+                    我们致力于为社区工作者提供专业、实用的工具与资源，推动基层治理体系和治理能力现代化。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>资源分类</h4>
+                <ul>
+                    <li><a href="#">工作计划模板</a></li>
+                    <li><a href="#">总结汇报范文</a></li>
+                    <li><a href="#">会议纪要模板</a></li>
+                    <li><a href="#">活动策划方案</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#">党建资料库</a></li>
+                    <li><a href="#">民生服务指南</a></li>
+                    <li><a href="#">社区治理案例</a></li>
+                    <li><a href="#">联系我们</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>联系方式</h4>
+                <ul>
+                    <li style="color: #bdc3c7; font-size: 0.9rem;">电话：400-123-4567</li>
+                    <li style="color: #bdc3c7; font-size: 0.9rem;">邮箱：service@communityplan.com</li>
+                    <li style="color: #bdc3c7; font-size: 0.9rem;">地址：XX市XX区XX街道</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 社区工作计划网 版权所有. 仅供学习与参考使用。</p>
+        </div>
+    </footer>
+
+</body>
+                                            </html>
