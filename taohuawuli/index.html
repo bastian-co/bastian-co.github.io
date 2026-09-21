@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>桃花坞里桃花庵 - 明代唐寅诗词与桃花坞文化鉴赏</title>
+    <meta name="description" content="桃花坞里桃花庵，桃花庵下桃花仙。本站致力于深度解析明代才子唐寅（唐伯虎）的经典诗作《桃花庵歌》，探讨其背后的隐逸思想、人生哲学以及苏州桃花坞的历史文化渊源。">
+    <meta name="keywords" content="桃花坞里桃花庵, 唐寅, 桃花庵歌, 明代诗词, 苏州文化, 唐伯虎, 隐逸文化">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B4513; /* SaddleBrown */
+            --secondary-color: #D2B48C; /* Tan */
+            --bg-color: #FDFBF7; /* Warm White */
+            --text-main: #333333;
+            --text-light: #666666;
+            --accent-green: #556B2F; /* DarkOliveGreen */
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "SimSun", serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.8;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d2b48c' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: #fff;
+            border-bottom: 1px solid var(--secondary-color);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            font-family: "KaiTi", "STKaiti", serif;
+            font-size: 1.8rem;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            font-size: 1rem;
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        nav a.active {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fdfbf7 0%, #e8dcc8 100%);
+            padding: 80px 0;
+            text-align: center;
+            border-bottom: 1px dashed var(--secondary-color);
+        }
+
+        .hero h1 {
+            font-family: "KaiTi", "STKaiti", serif;
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            letter-spacing: 5px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Main Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+            margin-bottom: 60px;
+        }
+
+        /* Article Section */
+        .article-section {
+            background: #fff;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .article-header {
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .article-header h2 {
+            font-family: "KaiTi", "STKaiti", serif;
+            font-size: 2.2rem;
+            color: var(--text-main);
+            margin-bottom: 10px;
+        }
+
+        .article-meta {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .poem-display {
+            font-family: "KaiTi", "STKaiti", serif;
+            font-size: 1.6rem;
+            text-align: center;
+            margin: 40px 0;
+            padding: 30px;
+            background-color: #fafafa;
+            border-left: 5px solid var(--primary-color);
+            border-right: 5px solid var(--primary-color);
+        }
+
+        .poem-display p {
+            margin: 15px 0;
+        }
+
+        .poem-display .author {
+            margin-top: 30px;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            border-left: 4px solid var(--accent-green);
+            padding-left: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .content-block {
+            margin-bottom: 30px;
+        }
+
+        .content-block h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        .content-block p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .sidebar-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            border-top: 3px solid var(--secondary-color);
+        }
+
+        .sidebar-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: var(--text-main);
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background-color: var(--secondary-color);
+            color: #fff;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 15px;
+            border-left: 2px solid #eee;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+        }
+
+        .timeline-item strong {
+            display: block;
+            color: var(--text-main);
+        }
+
+        .timeline-item span {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* Quote Section */
+        .quote-section {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .quote-section blockquote {
+            font-family: "KaiTi", "STKaiti", serif;
+            font-size: 1.8rem;
+            font-style: italic;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            transition: transform 0.3s ease;
+            box-shadow: var(--shadow);
+            border: 1px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--secondary-color);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .feature-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .feature-card p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c2c2c;
+            color: #ccc;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            nav {
+                display: none; /* Simplified for mobile */
+            }
+            
+            .header-inner {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <a href="#" class="logo">
+            <span>桃花坞</span> 桃花庵
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#poem">诗词赏析</a></li>
+                <li><a href="#culture">文化溯源</a></li>
+                <li><a href="#life">人生哲学</a></li>
+                <li><a href="#gallery">相关图集</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>桃花坞里桃花庵</h1>
+        <p>桃花庵下桃花仙，且将新火试新茶。诗酒趁年华</p>
+    </div>
+</section>
+
+<div class="container">
+    <div class="content-grid">
+        <!-- Main Article -->
+        <main class="article-section" id="poem">
+            <article>
+                <div class="article-header">
+                    <h2>桃花庵歌</h2>
+                    <div class="article-meta">明代 · 唐寅</div>
+                </div>
+
+                <div class="poem-display">
+                    <p>桃花坞里桃花庵，桃花庵下桃花仙。</p>
+                    <p>桃花仙人种桃树，又摘桃花换酒钱。</p>
+                    <p>酒醒只在花前坐，酒醉还来花下眠。</p>
+                    <p>半醒半醉日复日，花落花开年复年。</p>
+                    <p>但愿老死花酒间，不愿鞠躬车马前。</p>
+                    <p>车尘马足贵者趣，酒盏花枝贫者缘。</p>
+                    <p>若将富贵比贫贱，一在平地一在天。</p>
+                    <p>若将贫贱比车马，他得驱驰我得闲。</p>
+                    <p>别人笑我太疯癫，我笑他人看不穿。</p>
+                    <p>不见五陵豪杰墓，无花无酒锄作田。</p>
+                    <div class="author">—— 明·唐寅</div>
+                </div>
+
+                <div class="content-block">
+                    <h3>诗词全文与背景</h3>
+                    <p>《桃花庵歌》是明代著名画家、文学家唐寅（唐伯虎）的代表作之一。这首诗创作于唐寅晚年，此时他生活困顿，却依然保持着旷达洒脱的人生态度。诗中通过描绘桃花坞中桃花仙人的生活，表达了对自由、闲适生活的向往，以及对世俗名利观念的否定。</p>
+                    <p>全诗语言通俗自然，意境优美，既有对自然美景的细腻描绘，又有对人生哲理的深刻思考。它不仅是一首诗，更是一种生活态度的宣言。</p>
+                </div>
+
+                <div class="content-block">
+                    <h3>逐句赏析</h3>
+                    <p><strong>“桃花坞里桃花庵，桃花庵下桃花仙”</strong>：开篇点题，直接将读者带入一个桃花盛开的仙境。这里既是地名，也是诗人构建的精神家园。</p>
+                    <p><strong>“酒醒只在花前坐，酒醉还来花下眠”</strong>：诗人描述了自己日复一日的生活方式，不问世事，以花为伴，以酒为乐，体现了极致的逍遥。</p>
+                    <p><strong>“别人笑我太疯癫，我笑他人看不穿”</strong>：这是千古名句，表达了诗人对世俗眼光的不屑。世人追逐功名利禄，诗人却看透了其中的虚妄，自嘲中带着傲骨。</p>
+                </div>
+            </article>
+        </main>
+
+        <!-- Sidebar -->
+        <aside>
+            <div class="sidebar-card">
+                <h3>关键词索引</h3>
+                <div class="tag-cloud">
+                    <a href="#" class="tag">桃花坞</a>
+                    <a href="#" class="tag">唐寅</a>
+                    <a href="#" class="tag">桃花庵歌</a>
+                    <a href="#" class="tag">苏州文化</a>
+                    <a href="#" class="tag">明代文学</a>
+                    <a href="#" class="tag">隐逸</a>
+                    <a href="#" class="tag">酒文化</a>
+                    <a href="#" class="tag">诗书画印</a>
+                </div>
+            </div>
+
+            <div class="sidebar-card">
+                <h3>历史年表</h3>
+                <div class="timeline-item">
+                    <strong>1470年</strong>
+                    <span>唐寅生于苏州，后迁居桃花坞。</span>
+                </div>
+                <div class="timeline-item">
+                    <strong>1494年</strong>
+                    <span>父母、妻子相继去世，生活开始动荡。</span>
+                </div>
+                <div class="timeline-item">
+                    <strong>1506年</strong>
+                    <span>卷入科场舞弊案，被贬为吏，从此绝意仕途。</span>
+                </div>
+                <div class="timeline-item">
+                    <strong>晚年</strong>
+                    <span>隐居桃花坞，作《桃花庵歌》等大量诗文。</span>
+                </div>
+            </div>
+
+            <div class="sidebar-card">
+                <h3>推荐阅读</h3>
+                <ul style="padding-left: 20px; line-height: 2;">
+                    <li><a href="#">《把酒问月》</a></li>
+                    <li><a href="#">《秋风词》</a></li>
+                    <li><a href="#">《一剪梅》</a></li>
+                    <li><a href="#">《言志诗》</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+</div>
+
+<section class="quote-section">
+    <div class="container">
+        <blockquote>
+            “但愿老死花酒间，不愿鞠躬车马前。”
+        </blockquote>
+    </div>
+</section>
+
+<section class="container" id="culture">
+    <div class="section-title">文化溯源与苏州桃花坞</div>
+    <div class="content-block">
+        <h3>苏州桃花坞的历史地位</h3>
+        <p>“桃花坞”不仅是唐寅的居所，更是苏州文化的重要符号。桃花坞木刻年画（桃花坞年画）与天津杨柳青并称为“南桃北柳”，是中国民间艺术的瑰宝。这里曾汇聚了众多画师，形成了独特的艺术流派。</p>
+        <p>唐寅虽以诗画闻名，但他与桃花坞的年画艺术亦有千丝万缕的联系。他常与画师切磋技艺，其作品风格对后世木刻年画产生了深远影响。</p>
+    </div>
+</section>
+
+<section class="container" id="life">
+    <div class="section-title">人生哲学：富贵与贫贱的辩证</div>
+    <div class="features-grid">
+        <div class="feature-card">
+            <div class="feature-icon">🍃</div>
+            <h4>顺应自然</h4>
+            <p>诗中强调“花落花开年复年”，体现了顺应自然规律、不强求、不执着的生活哲学。</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🍷</div>
+            <h4>及时行乐</h4>
+            <p>“酒盏花枝贫者缘”，并非颓废，而是主张在有限的生命中，享受当下的美好与自由。</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">💎</div>
+            <h4>精神富足</h4>
+            <p>以“车马”喻富贵，以“花酒”喻精神，表达了精神世界的富足远胜物质追求的价值观。</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于本站</h4>
+                <p>本站致力于传承和弘扬中国古典诗词文化，特别是唐寅先生在苏州桃花坞时期的代表作及其背后的文化内涵。</p>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#poem">诗词全文</a></li>
+                    <li><a href="#culture">文化解析</a></li>
+                    <li><a href="#gallery">名家画作</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>联系方式</h4>
+                <ul>
+                    <li>邮箱: contact@example.com</li>
+                    <li>地址: 苏州文化园区</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 桃花坞里桃花庵. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
