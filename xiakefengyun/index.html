@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>侠客风云传天赋 - 全流派加点攻略与属性解析指南</title>
+    <meta name="description" content="侠客风云传天赋系统深度解析，提供所有侠客天赋效果详解、开局加点推荐、武学搭配技巧及属性成长指南。帮助玩家打造最强侠客，通关武林大会。">
+    <meta name="keywords" content="侠客风云传天赋,侠客风云传加点,侠客风云传开局,侠客风云传攻略,侠客风云传武学">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B4513; /* 棕色，武侠风 */
+            --secondary-color: #D2691E; /* 巧克力色 */
+            --accent-color: #DAA520; /* 金色 */
+            --bg-color: #Fdfbf7; /* 米色宣纸质感 */
+            --text-color: #333333;
+            --text-light: #666666;
+            --border-color: #E0D0B0;
+            --card-shadow: 0 4px 12px rgba(139, 69, 19, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "SimSun", serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4c5b0' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: #fff;
+            border-bottom: 2px solid var(--primary-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            border: 2px solid var(--primary-color);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-color);
+            font-size: 16px;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--secondary-color);
+        }
+
+        /* Mobile Menu Button */
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #3e2723 0%, #5d4037 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #3e2723;
+            padding: 12px 30px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: #f0c420;
+            transform: translateY(-2px);
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 40px;
+        }
+
+        /* Main Content */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        section {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-title span {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-weight: normal;
+            border-left: none;
+            padding-left: 0;
+        }
+
+        /* Talent Cards */
+        .talent-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .talent-card {
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            background: #fff;
+        }
+
+        .talent-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(139, 69, 19, 0.15);
+            border-color: var(--accent-color);
+        }
+
+        .talent-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .talent-header .type {
+            font-size: 0.8rem;
+            background: rgba(255,255,255,0.2);
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+
+        .talent-body {
+            padding: 15px;
+        }
+
+        .talent-desc {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+
+        .talent-stats {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            background: #f9f5f0;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+        .stat-row:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Guide List */
+        .guide-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .guide-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            transition: background 0.2s;
+        }
+
+        .guide-item:hover {
+            background-color: #fcfcfc;
+        }
+
+        .guide-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--border-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            flex-shrink: 0;
+        }
+
+        .guide-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+
+        .guide-content p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .widget {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+
+        .widget h3 {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--bg-color);
+            padding-bottom: 10px;
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background: #f0e6d2;
+            color: var(--primary-color);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            transition: background 0.2s;
+        }
+
+        .tag:hover {
+            background: var(--primary-color);
+            color: #fff;
+        }
+
+        .rank-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+
+        .rank-num {
+            width: 24px;
+            height: 24px;
+            background: var(--accent-color);
+            color: #3e2723;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .rank-name {
+            font-weight: 500;
+        }
+
+        /* FAQ */
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            color: var(--primary-color);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .faq-answer {
+            margin-top: 10px;
+            color: var(--text-light);
+            font-size: 0.95rem;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #3e2723;
+            color: #d7ccc8;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-wrap: wrap;
+                height: auto;
+                padding: 15px;
+            }
+
+            nav {
+                width: 100%;
+                margin-top: 15px;
+                overflow-x: auto;
+            }
+
+            nav ul {
+                padding-bottom: 5px;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .section-title {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <span>侠客风云</span> 天赋攻略
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#talent-list">全天赋列表</a></li>
+                <li><a href="#builds">流派加点</a></li>
+                <li><a href="#guide">新手指南</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">☰</div>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>侠客风云传天赋系统深度解析</h1>
+            <p>掌握核心天赋选择与加点策略，从开局到武林大会，打造你的独步江湖之路。</p>
+            <button class="cta-button" onclick="document.getElementById('builds').scrollIntoView({behavior: 'smooth'})">查看推荐流派</button>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Talent Categories -->
+            <section id="talent-list">
+                <h2 class="section-title">天赋分类 <span>共32种天赋可选</span></h2>
+                <div class="talent-grid">
+                    <!-- Card 1 -->
+                    <article class="talent-card">
+                        <div class="talent-header">
+                            <span>天资聪颖</span>
+                            <span class="type">综合</span>
+                        </div>
+                        <div class="talent-body">
+                            <p class="talent-desc">所有属性成长速度提升10%。这是最通用的开局天赋，适合所有流派。</p>
+                            <div class="talent-stats">
+                                <div class="stat-row"><span>属性成长</span><span>+10%</span></div>
+                                <div class="stat-row"><span>适用性</span><span>★★★★★</span></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="talent-card">
+                        <div class="talent-header">
+                            <span>身强力壮</span>
+                            <span class="type">体质/力量</span>
+                        </div>
+                        <div class="talent-body">
+                            <p class="talent-desc">体质与力量初始值各+5，且体质上限提升。适合肉盾流、力道剑法流。</p>
+                            <div class="talent-stats">
+                                <div class="stat-row"><span>体质</span><span>+5</span></div>
+                                <div class="stat-row"><span>力量</span><span>+5</span></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="talent-card">
+                        <div class="talent-header">
+                            <span>机灵鬼</span>
+                            <span class="type">智力/反应</span>
+                        </div>
+                        <div class="talent-body">
+                            <p class="talent-desc">智力与反应初始值各+5，且智力上限提升。适合策略流、暗器流。</p>
+                            <div class="talent-stats">
+                                <div class="stat-row"><span>智力</span><span>+5</span></div>
+                                <div class="stat-row"><span>反应</span><span>+5</span></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 4 -->
+                    <article class="talent-card">
+                        <div class="talent-header">
+                            <span>天生神力</span>
+                            <span class="type">力量</span>
+                        </div>
+                        <div class="talent-body">
+                            <p class="talent-desc">力量初始值+10，力量上限提升。必选天赋，几乎覆盖所有主修力量武学的流派。</p>
+                            <div class="talent-stats">
+                                <div class="stat-row"><span>力量</span><span>+10</span></div>
+                                <div class="stat-row"><span>上限</span><span>↑</span></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 5 -->
+                    <article class="talent-card">
+                        <div class="talent-header">
+                            <span>绝世好剑</span>
+                            <span class="type">武器</span>
+                        </div>
+                        <div class="talent-body">
+                            <p class="talent-desc">所有剑法威力+10%。对于主修剑法的玩家来说，是提升输出的关键天赋。</p>
+                            <div class="talent-stats">
+                                <div class="stat-row"><span>剑法</span><span>+10%</span></div>
+                                <div class="stat-row"><span>适用</span><span>剑侠</span></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 6 -->
+                    <article class="talent-card">
+                        <div class="talent-header">
+                            <span>百步穿杨</span>
+                            <span class="type">暗器</span>
+                        </div>
+                        <div class="talent-body">
+                            <p class="talent-desc">所有暗器威力+15%，且命中率提升。暗器流的核心天赋。</p>
+                            <div class="talent-stats">
+                                <div class="stat-row"><span>暗器</span><span>+15%</span></div>
+                                <div class="stat-row"><span>命中</span><span>↑</span></div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Builds Guide -->
+            <section id="builds">
+                <h2 class="section-title">热门流派推荐</h2>
+                <div class="guide-list">
+                    <div class="guide-item">
+                        <div class="guide-icon">⚔️</div>
+                        <div class="guide-content">
+                            <h3>力道剑法流</h3>
+                            <p>推荐天赋：天生神力、绝世好剑、身强力壮。主修落英剑法、狂风刀法。</p>
+                        </div>
+                    </div>
+                    <div class="guide-item">
+                        <div class="guide-icon">🥋</div>
+                        <div class="guide-content">
+                            <h3>内功反击流</h3>
+                            <p>推荐天赋：机灵鬼、百步穿杨、天生神力。主修化功大法、九阳神功。</p>
+                        </div>
+                    </div>
+                    <div class="guide-item">
+                        <div class="guide-icon">🏹</div>
+                        <div class="guide-content">
+                            <h3>暗器速攻流</h3>
+                            <p>推荐天赋：机灵鬼、百步穿杨、天资聪颖。主修飞龙在天、弹指神通。</p>
+                        </div>
+                    </div>
+                    <div class="guide-item">
+                        <div class="guide-icon">🍵</div>
+                        <div class="guide-content">
+                            <h3>厨艺逍遥流</h3>
+                            <p>推荐天赋：天资聪颖、机灵鬼。主修厨艺，辅助队友属性提升。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Guide Text -->
+            <section id="guide">
+                <h2 class="section-title">新手加点指南</h2>
+                <article>
+                    <h3>1. 天赋选择原则</h3>
+                    <p>在《侠客风云传》中，天赋决定了角色的初始属性和成长方向。新手玩家建议优先选择<b>“天资聪颖”</b>，因为它能提升所有属性的成长，让你在前期更灵活地应对各种挑战，无论是练剑还是练厨艺都有帮助。</p>
+                </article>
+                <br>
+                <article>
+                    <h3>2. 属性点分配技巧</h3>
+                    <p>属性点通常在游戏初期或特定事件中获得。对于主修武学的角色，建议将大部分属性点投入到对应的属性上（如练剑投入力量和反应）。对于辅助角色，智力属性则更为重要，能提升医术和厨艺的成功率。</p>
+                </article>
+                <br>
+                <article>
+                    <h3>3. 武学搭配建议</h3>
+                    <p>天赋只是基础，武学的搭配才是核心。例如，拥有“绝世好剑”天赋的玩家，在修炼《落英剑法》时，伤害会比普通玩家高出不少。同时，记得在江湖历练中寻找秘籍，解锁更高级的天赋效果。</p>
+                </article>
+            </section>
+        </div>
+
+        <!-- Sidebar -->
+        <aside>
+            <div class="widget">
+                <h3>热门标签</h3>
+                <div class="tag-cloud">
+                    <a href="#" class="tag">新手攻略</a>
+                    <a href="#" class="tag">武林大会</a>
+                    <a href="#" class="tag">厨艺系统</a>
+                    <a href="#" class="tag">毒术</a>
+                    <a href="#" class="tag">医术</a>
+                    <a href="#" class="tag">逍遥御风</a>
+                    <a href="#" class="tag">古墓派</a>
+                    <a href="#" class="tag">天王党</a>
+                </div>
+            </div>
+
+            <div class="widget">
+                <h3>必看天赋排行</h3>
+                <ul class="rank-list">
+                    <li><span class="rank-num">1</span><span class="rank-name">天资聪颖</span></li>
+                    <li><span class="rank-num">2</span><span class="rank-name">天生神力</span></li>
+                    <li><span class="rank-num">3</span><span class="rank-name">机灵鬼</span></li>
+                    <li><span class="rank-num">4</span><span class="rank-name">百步穿杨</span></li>
+                    <li><span class="rank-num">5</span><span class="rank-name">绝世好剑</span></li>
+                </ul>
+            </div>
+
+            <div class="widget">
+                <h3>常见问题 (FAQ)</h3>
+                <div class="faq-list">
+                    <div class="faq-item active">
+                        <div class="faq-question" onclick="toggleFaq(this)">天赋可以重置吗？ <span>+</span></div>
+                        <div class="faq-answer">游戏内后期可以通过特定道具或事件重置部分天赋加点，但开局选择一旦确认通常无法更改。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">哪个天赋最适合厨艺？ <span>+</span></div>
+                        <div class="faq-answer">建议选择“天资聪颖”或“机灵鬼”，这两个天赋能显著提升智力属性，从而大幅提高厨艺的成功率和做出的菜品质。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">天赋会影响剧情走向吗？ <span>+</span></div>
+                        <div class="faq-answer">天赋主要影响战斗数值和属性成长，对主线剧情分支影响较小，但可能影响某些特定事件的触发条件。</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-col">
+            <h4>侠客风云传攻略</h4>
+            <ul>
+                <li><a href="#">新手入门</a></li>
+                <li><a href="#">武林盟主</a></li>
+                <li><a href="#">天王党路线</a></li>
+                <li><a href="#">逍遥谷路线</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>游戏系统</h4>
+            <ul>
+                <li><a href="#">武学图鉴</a></li>
+                <li><a href="#">厨艺大全</a></li>
+                <li><a href="#">毒术与医术</a></li>
+                <li><a href="#">养成系统</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>关于本站</h4>
+            <p style="font-size: 0.9rem; line-height: 1.6;">
+                本站为玩家自发整理的侠客风云传游戏资料库，提供最新的天赋解析与攻略指南，致力于帮助玩家更好地体验游戏。
+            </p>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2023 侠客风云传攻略网. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+    // FAQ Toggle Function
+    function toggleFaq(element) {
+        const parent = element.parentElement;
+        const icon = element.querySelector('span');
+        
+        // Close others (optional, for accordion style)
+        document.querySelectorAll('.faq-item').forEach(item => {
+            if (item !== parent) {
+                item.classList.remove('active');
+                item.querySelector('.faq-question span').textContent = '+';
+            }
+        });
+
+        // Toggle current
+        parent.classList.toggle('active');
+        icon.textContent = parent.classList.contains('active') ? '-' : '+';
+    }
+
+    // Mobile Menu Toggle (Simple implementation)
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navUl = document.querySelector('nav ul');
+
+    if(menuToggle) {
+        menuToggle.addEventListener('click', () => {
+            if (navUl.style.display === 'flex') {
+                navUl.style.display = 'none';
+            } else {
+                navUl.style.display = 'flex';
+                navUl.style.flexDirection = 'column';
+                navUl.style.position = 'absolute';
+                navUl.style.top = '70px';
+                navUl.style.left = '0';
+                navUl.style.width = '100%';
+                navUl.style.background = '#fff';
+                navUl.style.padding = '20px';
+                navUl.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)';
+            }
+        });
+    }
+</script>
+
+</body>
+  </html>
